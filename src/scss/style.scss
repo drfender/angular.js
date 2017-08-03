@@ -25,7 +25,7 @@ body {
   margin-left: 271px;
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 271px);
 }
 .comment_block {
   margin-left: 30px;
@@ -61,6 +61,7 @@ body {
     }
   }
   &__comment {
+    margin-top: 10px;
     p, button {
       display: inline-block;
 
@@ -68,6 +69,13 @@ body {
     }
     button {
       float: right;
+      color: #ff4267;
+      background-color: inherit;
+      border: 1px solid #ff4267;
+      border-radius: 3px;
+    }
+    p {
+      width: 80%;
     }
   }
 }
