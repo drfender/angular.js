@@ -13,4 +13,61 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
+  .title {
+    font-size: 36px;
+    color: #565a69;
+    font-weight: 100;
+    padding-left: 30px;
+  }
+}
+.main {
+  background-color: #f9f9f9;
+  margin-left: 271px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.comment_block {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 480px;
+  min-height: 530px;
+  padding: 25px;
+  background-color: #fff;
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    color: #565a69;
+  }
+  &_form {
+    font-size: 16px;
+    margin-top: 25px;
+    &__input {
+      width: 60%;
+      height: 30px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      outline: none;
+      padding-left: 13px;
+    }
+    &__button {
+      width: 30%;
+      height: 34px;
+      border: none;
+      border-radius: 5px;
+      background-color: #27ccc0;
+      float: right;
+      outline: none;
+    }
+  }
+  &__comment {
+    p, button {
+      display: inline-block;
+
+      margin: 0;
+    }
+    button {
+      float: right;
+    }
+  }
 }

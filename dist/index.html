@@ -7,13 +7,27 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="firstCtrl">
   <div class="container">
     <aside class="navbar">
-      1
+      <h1 class='title'>Main</h1>
     </aside>
-    2
+    <main class="main">
+      <div class="comment_block">
+        <h2 class="comment_block__title">Items</h2>
+        <div class="comment_block_form">
+          <input type="text" class="comment_block_form__input" ng-model='Item' placeholder="Type name here...">
+          <button type="submit" class="comment_block_form__button" ng-click='addItem()'>Add new</button>
+          <div class="comment_block__comment" ng-repeat='x in comment'>
+            <p>{{x}}</p>
+            <button ng-click='remoteItem($index)'>Delete</button>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 </body>
 </html>
